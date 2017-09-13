@@ -35,7 +35,6 @@ if __name__ == "__main__":
     ra = coord.Angle(data['ra'] * u.degree)
     ra = ra.wrap_at(180 * u.degree)
     dec = coord.Angle(data['dec'] * u.degree)
-    data = ascii.read("sample_data.ascii")
     rcoords = []
     dcoords = []
     prlx = []

@@ -17,6 +17,7 @@ __author__ = "Raghav Mishra"
 __email__ = "r.mishra@uqconnect.edu.au"
 
 from astropy.io import ascii
+from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -34,6 +35,8 @@ if __name__ == "__main__":
         chidiff = chi(star['pmra'],19.45) + chi(star['pmdec'], -45.35) + chi(star['parallax'], 7.42)
         if chidiff < 10:
             chilit1 += [star]
+        else:
+            chilit2
 
     rcoords = []
     dcoords = []
