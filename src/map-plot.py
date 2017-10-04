@@ -32,7 +32,7 @@ map = Basemap(projection='hammer',
 
     # Read ascii table data
 data = ascii.read("sample_data.ascii")
-fig = plt.figure()
+fig = plt.figure(figsize=(5,5))
 ax1 = fig.add_subplot(111)
 
 chilit1 = []

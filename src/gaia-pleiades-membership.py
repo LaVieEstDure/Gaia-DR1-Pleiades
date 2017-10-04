@@ -17,7 +17,6 @@ __author__ = "Raghav Mishra"
 __email__ = "r.mishra@uqconnect.edu.au"
 
 from astropy.io import ascii
-from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np
 
