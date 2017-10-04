@@ -27,6 +27,7 @@ from astropy.visualization import hist
 def chi(val, mu):
     return ((val - mu)**2)/abs(mu)
 
+
 if __name__ == "__main__":
     # Read ascii table data
     data = ascii.read("sample_data.ascii")
