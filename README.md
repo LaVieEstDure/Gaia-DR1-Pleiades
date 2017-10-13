@@ -6,7 +6,9 @@ There are multiple files in the source directory, mainly for visualisation of da
 
 **Note:** The DR1 data used is in an ascii table. The data for DR1 is usually provided as a VOTable so you must convert it to ascii yourself (`astropy.io.ascii` and `astropy.io.votable` may come in handy)
 
-![Pleiades](https://github.com/LaVieEstDure/Gaia-DR1-Pleiades/blob/master/output_images/expanded_query.png?raw=true)
+<p align="center">
+  <img src="https://github.com/LaVieEstDure/Gaia-DR1-Pleiades/blob/master/output_images/expanded_query.png?raw=true"/>
+</p>
 
 ## Dependencies:
 ```
