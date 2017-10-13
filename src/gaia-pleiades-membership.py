@@ -26,7 +26,7 @@ def chi(val, mu):
 
 if __name__ == "__main__":
     # Read ascii table data
-    data = ascii.read("sample_data.ascii")
+    data = ascii.read("../data/extended_samp.ascii")
 
     chilit1 = []
     chilit2 = []
@@ -44,7 +44,6 @@ if __name__ == "__main__":
         dcoords.append(star['pmdec'])
 
     # Proper motion plot
-    plt.subplot(3, 2, 1)
     arr = np.array([rcoords, dcoords])
     plt.plot(arr[0,], arr[1,], 'k.')
     plt.axis([-30, 50, -60, 25])

@@ -30,7 +30,7 @@ def chi(val, mu):
 
 if __name__ == "__main__":
     # Read ascii table data
-    data = ascii.read("sample_data.ascii")
+    data = ascii.read("../data/extended_samp.ascii")
 
     # Set up a list of proper motions
     ra = coord.Angle(data['ra'] * u.degree)

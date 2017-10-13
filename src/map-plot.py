@@ -27,11 +27,11 @@ import astropy.units as u
 def chi(val, mu):
     return ((val - mu)**2)/abs(mu)
 
-map = Basemap(projection='hammer',
+map = Basemap(
               lat_0=0, lon_0=0)
 
     # Read ascii table data
-data = ascii.read("sample_data.ascii")
+data = ascii.read("../data/extended_samp.ascii")
 fig = plt.figure(figsize=(5,5))
 ax1 = fig.add_subplot(111)
 
@@ -69,5 +69,9 @@ x2, y2 = map(rcoordsnon, dcoordsnon)
 
 map.scatter(x, y, color='y')
 map.scatter(x2, y2, marker='D', color='k')
+
+# data = ascii.read("sample_data.ascii")
+# map.scatter(data['ra'], data['dec'], color='b')
+
 
 plt.show()

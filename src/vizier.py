@@ -22,7 +22,7 @@ from astropy.table import vstack, Table
 from astroquery.vizier import Vizier as vz
 
 if __name__ == "__main__":
-    data = ascii.read("sample_data.ascii")
+    data = ascii.read("../data/extended_samp.ascii")
     foundstars = []
     print("Searching for stars...")
 
@@ -35,4 +35,4 @@ if __name__ == "__main__":
         print(f"Stars counted: {counter} \n Stars left: {len(data) - counter}")
 
     foundstars = vstack(foundstars)
-    foundstars.write('2mas_matched.ascii', format='ascii')
+    foundstars.write('../data/2mas_matched.ascii', format='ascii')
