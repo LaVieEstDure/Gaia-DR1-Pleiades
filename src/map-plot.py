@@ -24,21 +24,23 @@ from astropy.io import ascii
 import astropy.coordinates as coord
 import astropy.units as u
 
+
 def chi(val, mu):
-    return ((val - mu)**2)/abs(mu)
+    return ((val - mu)**2) / abs(mu)
 
-map = Basemap(
-              lat_0=0, lon_0=0)
 
-    # Read ascii table data
+map = Basemap(projection='hammer'
+    lat_0=0, lon_0=0)
+
+# Read ascii table data
 data = ascii.read("../data/extended_samp.ascii")
-fig = plt.figure(figsize=(5,5))
+fig = plt.figure(figsize=(5, 5))
 ax1 = fig.add_subplot(111)
 
 chilit1 = []
 chilit2 = []
 for star in data:
-    chidiff = chi(star['pmra'],19.45) + chi(star['pmdec'], -45.35) + chi(star['parallax'], 7.42)
+    chidiff = chi(star['pmra'], 19.45) + chi(star['pmdec'], -45.35) + chi(star['parallax'], 7.42)
     if chidiff < 10:
         chilit1 += [star]
     else:
@@ -59,7 +61,7 @@ for star in chilit1:
 colours = []
 for i in rcoords:
     colours += [1]
-for i   in rcoordsnon:
+for i in rcoordsnon:
     colours += [0]
 
 print(rcoords)
